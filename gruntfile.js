@@ -44,7 +44,8 @@ module.exports = function(grunt) {
           "src/css/main.css" : "src/sass/main.scss"
         },
         options: {
-          outputStyle: 'expanded'
+          outputStyle: 'expanded',
+          sourceMap: true
         }
       },
 
