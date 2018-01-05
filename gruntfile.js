@@ -45,7 +45,8 @@ module.exports = function(grunt) {
         },
         options: {
           outputStyle: 'expanded',
-          sourceMap: true
+          sourceMap: true,
+          includePaths: ['node_modules/']
         }
       },
 
@@ -56,7 +57,7 @@ module.exports = function(grunt) {
         },
         options: {
           outputStyle: 'expanded',
-          sourcemap: 'none'
+          sourceMap: 'none'
         }
       }
 
@@ -115,7 +116,7 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('lint', ['stylelint']);
+  // grunt.registerTask('lint', ['stylelint']);
   grunt.registerTask('prod', ['sass:prod', 'postcss', 'copy']);
 
 };
