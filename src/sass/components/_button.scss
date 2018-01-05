@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+// which one is the best method?
+// text-color mixin
+// or
+// dynamic-text-color function
+
+
+.btn {
+  font-size: 16px;
+  padding: $space-m $space-l;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn--primary {
+  background: theme-color(primary);
+  @include text-color(theme-color(primary));
+
+  @include on-event {
+    background: darken(theme-color(primary), 20%);
+
+    @include text-color(darken(theme-color(primary), 20%));
+  };
+}
+
+.btn--secondary {
+  background: theme-color(secondary);
+  @include text-color(theme-color(secondary));
+  // color: dynamic-text-color(theme-color(secondary));
+
+  @include on-event {
+    background: darken(theme-color(secondary), 20%);
+
+    @include text-color(darken(theme-color(secondary), 20%));
+  };
+}
+
+.btn--success {
+  background: theme-color(success);
+  @include text-color(theme-color(success));
+  // color: dynamic-text-color(theme-color(success));
+
+  @include on-event {
+    background: darken(theme-color(success), 20%);
+    @include text-color(darken(theme-color(success), 20%));
+  };
+}
+
+.btn--warning {
+  background: theme-color(warning);
+  @include text-color(theme-color(warning));
+  // color: dynamic-text-color(theme-color(warning));
+
+  @include on-event {
+    background: darken(theme-color(warning), 20%);
+    @include text-color(darken(theme-color(warning), 20%));
+  };
+}
+
+.btn--danger {
+  background: theme-color(danger);
+  @include text-color(theme-color(danger));
+  // color: dynamic-text-color(theme-color(danger));
+
+  @include on-event {
+    background: darken(theme-color(danger), 20%);
+    @include text-color(darken(theme-color(danger), 20%));
+  };
+}
+
+.btn--info {
+  background: theme-color(info);
+  @include text-color(theme-color(info));
+  // color: dynamic-text-color(theme-color(info));
+
+  @include on-event {
+    background: darken(theme-color(info), 20%);
+    @include text-color(darken(theme-color(info), 20%));
+  };
+}
